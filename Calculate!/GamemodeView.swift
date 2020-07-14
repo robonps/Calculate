@@ -16,7 +16,7 @@ struct GamemodeView: View {
             HStack {
                 NavigationLink(destination: ZenView().navigationBarBackButtonHidden(true)) {
                     Text("Zen")
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color.black)
                 }
                 .background(Image("Button"))
                 .padding(.leading, 70.0)
@@ -25,6 +25,7 @@ struct GamemodeView: View {
                     Text("Time\n Challenge")
                         .multilineTextAlignment(.center)
                         .font(.system(size: 12))
+                        .foregroundColor(Color.black)
                 }
                 .background(Image("Button"))
                 .padding(.trailing, 70.0)
