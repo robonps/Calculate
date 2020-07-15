@@ -15,19 +15,20 @@ struct GamemodeView: View {
                 .font(.largeTitle)
             HStack {
                 NavigationLink(destination: ZenView().navigationBarBackButtonHidden(true)) {
-                    Text("Zen")
-                        .foregroundColor(Color.black)
+                    HStack {
+                        Text("Zen").foregroundColor(Color.black)
+                    }
+                    .background(Image("Button").foregroundColor(Color.orange))
                 }
-                .background(Image("Button"))
                 .padding(.leading, 70.0)
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Time\n Challenge")
-                        .multilineTextAlignment(.center)
-                        .font(.system(size: 12))
-                        .foregroundColor(Color.black)
+                NavigationLink(destination: ZenView().navigationBarBackButtonHidden(true)) {
+                    HStack {
+                        Text("    Time\nChallenge").foregroundColor(Color.black)
+                            .font(.footnote)
+                    }
+                    .background(Image("Button").foregroundColor(Color.orange))
                 }
-                .background(Image("Button"))
                 .padding(.trailing, 70.0)
             }
             .padding(.top, 30.0)
